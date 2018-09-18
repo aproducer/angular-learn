@@ -1,0 +1,9 @@
+<div *ngFor="let item of datalist.data" class="goods">
+        <img [src]="preString+item.src" class="gPic"/>
+        <h4 class="gName">{{item.name}}</h4>
+        <p class="gInf">{{item.inf}}</p>
+        <div class="bottom">
+            <span class="price">{{item.price}}</span>
+            <div class="buy">立即购买</div>
+        </div>
+</div>

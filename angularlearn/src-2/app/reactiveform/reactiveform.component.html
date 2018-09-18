@@ -1,0 +1,7 @@
+<p>
+  reactiveform works!
+</p>
+<form action="" method="post" invalidata [formGroup]="user">
+	<input type="text" formControlName="username" />
+	<p *ngIf="user.get('username').hasError('required')&&user.get('username').touched">sds</p>
+</form>

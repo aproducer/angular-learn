@@ -1,0 +1,48 @@
+.goods {
+	width: 192px;
+	height: 278px;
+	padding: 3px;
+	/*background: orange;*/
+	border: 1px solid black;
+	background: ghostwhite;
+	/*float: left;*/
+}
+
+.goods h4 {
+	line-height: 28px;
+}
+
+.gPic {
+	width: 192px;
+	height: 192px;
+}
+
+.gInf {
+	font-size: 12px;
+	color: darkgray;
+	line-height: 18px;
+}
+
+.bottom {
+	font-size: 12px;
+	color: deeppink;
+	/*background: green;*/
+	height: 30px;
+}
+
+.price {
+	font-size: 22px;
+	color: deeppink;
+	float: left;
+	display: inline-block;
+}
+
+.buy {
+	font-size: 13px;
+	color: white;
+	border-radius: 3px;
+	background: deeppink;
+	float: right;
+	padding: 5px 10px;
+	margin-top: 3px;
+}

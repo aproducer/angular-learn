@@ -1,0 +1,10 @@
+<p>
+	templateform works!
+</p>
+<form action="" invalidata>
+	<p><input type="text" name="name" id="" value="" [(ngModel)]="name" #username="ngModel" minlength=3 required/>{{username.errors|json}}</p>
+	<div *ngIf="username.invalid&&(username.touched||username.dirty)" style="color: red">
+		<p *ngIf="username.errors.minlength">长度值不符合要求</p>
+		<p *ngIf="username.errors.required">请输入姓名</p>
+	</div>
+</form>
