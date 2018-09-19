@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+
+ul li {
+	list-style: none;
+}
+
+.wrapper {
+	width: 95%;
+	margin: 0 auto;
+}
+
+.mask {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0;
+	z-index: 10;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 0.5;
+	}
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 0.5;
+	}
+	to {
+		opacity: 0;
+	}
+}
