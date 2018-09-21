@@ -1,7 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {HttpModule }from '@angular/http';
+import { myRouter } from './router/index';
 
-import { mainrouter } from './router/index';
+import { SwiperModule } from 'angular2-useful-swiper';
+
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -13,6 +16,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { CardComponent } from './card/card.component';
 import { NowPlayingComponent } from './video/now-playing/now-playing.component';
 import { ComingSoonComponent } from './video/coming-soon/coming-soon.component';
+import { DetailComponent } from './video/detail/detail.component';
 
 @NgModule({
 	declarations: [
@@ -25,11 +29,14 @@ import { ComingSoonComponent } from './video/coming-soon/coming-soon.component';
 		ProfileComponent,
 		CardComponent,
 		NowPlayingComponent,
-		ComingSoonComponent
+		ComingSoonComponent,
+		DetailComponent
 	],
 	imports: [
 		BrowserModule,
-		mainrouter
+		myRouter,
+		HttpModule,
+		SwiperModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]

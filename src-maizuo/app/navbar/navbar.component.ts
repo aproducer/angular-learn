@@ -17,7 +17,5 @@ export class NavbarComponent implements OnInit {
 		console.log(this.ifShow);
 		this.ifShow ? (elemt.style.animation = "show alternate .5s ease forwards") : (elemt.style.animation = "hide alternate .5s ease forwards");
 		this.ifShow ? (mask.style.animation = "fadeIn alternate .5s ease forwards") : (mask.style.animation = "fadeOut alternate .5s ease forwards");
-		
-		
 	}
 }

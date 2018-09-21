@@ -7,41 +7,47 @@ import { ProfileComponent } from '../profile/profile.component';
 import { CardComponent } from '../card/card.component';
 import { NowPlayingComponent } from '../video/now-playing/now-playing.component';
 import { ComingSoonComponent } from '../video/coming-soon/coming-soon.component';
+import { DetailComponent } from '../video/detail/detail.component';
 
-
-const mainrouter = RouterModule.forRoot([{
+const myRouter = RouterModule.forRoot([{
 	path: "home",
 	component: HomeComponent
-},{
+}, {
 	path: "video",
 	component: VideoComponent,
-	children:[{
-		path:'now-playing',
-		component:NowPlayingComponent
-	},{
-		path:'coming-soon',
-		component:ComingSoonComponent
-	},{
-		path:'',
-		redirectTo:'/video/now-playing',
-		pathMatch:'prefix'
+	children: [{
+		path: 'now-playing',
+		component: NowPlayingComponent
+	}, {
+		path: 'coming-soon',
+		component: ComingSoonComponent,
+		children: [{
+			path: ":id",
+			component: DetailComponent
+		}]
+	}, {
+		path: '',
+		redirectTo: '/video/now-playing',
+		pathMatch: 'prefix'
 	}]
-},{
+}, {
 	path: "cinema",
 	component: CinemaComponent
-},{
+}, {
 	path: "shop",
 	component: ShopComponent
-},{
+}, {
 	path: "profile",
 	component: ProfileComponent
-},{
+}, {
 	path: "card",
 	component: CardComponent
-},{
+}, {
 	path: "",
-	redirectTo:'/home',
-	pathMatch:'prefix'
+	redirectTo: '/home',
+	pathMatch: 'prefix'
 }]);
 
-export {mainrouter}
+export {
+	myRouter
+}
